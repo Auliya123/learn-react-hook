@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
 import "./styles.css";
 import ComponentA from "./ComponentA";
+import ComponentB from "./ComponentB";
 
 export const CountContext = React.createContext();
 
@@ -21,13 +22,19 @@ const reducer = (state, action) => {
 export default function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
   return (
-    <CountContext.Provider
-      value={{ countState: count, countDispatch: dispatch }}
-    >
-      <div className="App">
-        Count {count}
-        <ComponentA />
-      </div>
-    </CountContext.Provider>
+    // useContext and useReducer
+    // <CountContext.Provider
+    //   value={{ countState: count, countDispatch: dispatch }}
+    // >
+    //   <div className="App">
+    //     Count {count}
+    //     <ComponentA />
+    //   </div>
+    // </CountContext.Provider>
+
+    //useMemo
+    <div>
+      <ComponentB />
+    </div>
   );
 }
