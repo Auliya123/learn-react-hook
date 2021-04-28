@@ -2,6 +2,7 @@ import React, { useReducer } from "react";
 import "./styles.css";
 import ComponentA from "./ComponentA";
 import ComponentB from "./ComponentB";
+import ComponentC from "./ComponentC";
 
 export const CountContext = React.createContext();
 
@@ -32,9 +33,12 @@ export default function App() {
     //   </div>
     // </CountContext.Provider>
 
-    //useMemo
     <div>
+      {/* use Memo */}
       <ComponentB />
+
+      {/* use state dan useEffect */}
+      {/* <ComponentC /> */}
     </div>
   );
 }
